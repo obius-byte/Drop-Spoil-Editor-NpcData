@@ -1,0 +1,16 @@
+C:\Users\User\Documents\SharpDevelop Projects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Debug\PTS Drop modifier (npcdata).csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\SharpDevelop Projects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Debug\PTS_Drop_modifier__npcdata_.MainForm.resources
+C:\Users\User\Documents\SharpDevelop Projects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Debug\PTS Drop modifier (npcdata).csproj.GenerateResource.Cache
+C:\Users\User\Documents\SharpDevelop Projects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\bin\Debug\npcdata.exe.config
+C:\Users\User\Documents\SharpDevelop Projects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\bin\Debug\npcdata.exe
+C:\Users\User\Documents\SharpDevelop Projects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\bin\Debug\npcdata.pdb
+C:\Users\User\Documents\SharpDevelop Projects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Debug\npcdata.exe
+C:\Users\User\Documents\SharpDevelop Projects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Debug\npcdata.pdb
+E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Debug\PTS Drop modifier (npcdata).csprojResolveAssemblyReference.cache
+E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Debug\PTS_Drop_modifier__npcdata_.MainForm.resources
+E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Debug\PTS Drop modifier (npcdata).csproj.GenerateResource.Cache
+E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Debug\npcdata.exe
+E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\bin\Debug\npcdata.exe.config
+E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\bin\Debug\npcdata.exe
+E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\bin\Debug\npcdata.pdb
+E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Debug\npcdata.pdb
