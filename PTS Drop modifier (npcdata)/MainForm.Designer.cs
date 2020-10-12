@@ -140,7 +140,6 @@ namespace PTS_Drop_modifier__npcdata_
 			// 
 			this.statusBarPanel.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Spring;
 			this.statusBarPanel.Name = "statusBarPanel";
-			this.statusBarPanel.Text = "";
 			this.statusBarPanel.Width = 767;
 			// 
 			// tabControl1
@@ -172,7 +171,6 @@ namespace PTS_Drop_modifier__npcdata_
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "prepare";
 			this.tabPage1.UseVisualStyleBackColor = true;
-			//this.tabPage1.Click += new System.EventHandler(this.TabPage1Click);
 			// 
 			// groupBox7
 			// 
@@ -513,7 +511,7 @@ namespace PTS_Drop_modifier__npcdata_
 			this.Controls.Add(this.tabControl1);
 			this.Controls.Add(this.statusBar);
 			this.Name = "MainForm";
-			this.Text = "npcdata editor for mmo-dev.info";
+			this.Text = "Drop / Spoil Editor npcdata for mmo-dev.info";
 			((System.ComponentModel.ISupportInitialize)(this.statusBarPanel)).EndInit();
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
@@ -555,12 +553,20 @@ namespace PTS_Drop_modifier__npcdata_
 			        {
 						while ( reader.Peek() >= 0 )
                 		{            
-							string line = reader.ReadLine();
-							string[] param = line.Split( '=' );
+							string line = reader.ReadLine().Trim();
+							if ( string.IsNullOrEmpty( line ) )
+								continue;
 							
-							int id = Int32.Parse (param[1].Trim() ) - 1000000;
+							string[] npcParam = line.Split( '=' );
+							if ( npcParam.Length < 2 )
+								continue;
 							
-							listBoxNpcPch.Items.Add( id + "\t" + param[0].Trim().Replace("[", string.Empty).Replace("]", string.Empty) );
+							int npcId      = Int32.Parse( npcParam[1].Trim() ) - 1000000;
+							string npcName = npcParam[0].Trim()
+								.Replace( "[", string.Empty )
+								.Replace( "]", string.Empty );
+							
+							listBoxNpcPch.Items.Add( npcId + "\t" + npcName );
 						}
 			        }
 					statusBarPanel.Text = "";
@@ -648,10 +654,20 @@ namespace PTS_Drop_modifier__npcdata_
 			        {
 						while ( reader.Peek() >= 0 )
                 		{            
-							string line = reader.ReadLine();
-							string[] param = line.Split( '=' );
-
-							listBoxItemPch.Items.Add( param[1].Trim() + "\t" + param[0].Trim().Replace("[", string.Empty).Replace("]", string.Empty) );
+							string line = reader.ReadLine().Trim();
+							if ( string.IsNullOrEmpty( line ) )
+								continue;
+							
+							string[] itemParam = line.Split( '=' );
+							if ( itemParam.Length < 2 )
+								continue;
+							
+							var itemId   = itemParam[1].Trim();
+							var itemName = itemParam[0].Trim()
+								.Replace( "[", string.Empty )
+								.Replace( "]", string.Empty );
+							
+							listBoxItemPch.Items.Add( itemId + "\t" + itemName );
 						}
 			        }
 					statusBarPanel.Text = "";
