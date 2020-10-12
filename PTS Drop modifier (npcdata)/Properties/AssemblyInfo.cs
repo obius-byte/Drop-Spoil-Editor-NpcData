@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle ("npcdata")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("")]
+[assembly: AssemblyCompany ("//not a company")]
 [assembly: AssemblyProduct ("npcdata")]
 [assembly: AssemblyCopyright ("Copyright 2020")]
 [assembly: AssemblyTrademark ("")]

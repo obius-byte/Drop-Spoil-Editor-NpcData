@@ -1,6 +1,6 @@
 ﻿/*
  * Created by SharpDevelop.
- * User: User
+ * Author: Obius
  * Date: 08.10.2020
  * Time: 19:41
  * 
@@ -30,17 +30,17 @@ namespace PTS_Drop_modifier__npcdata_
 		
 		void Button1Click(object sender, EventArgs e)
 		{
-			openNpcData();
+			openFile( "npcdata.txt" );
 		}
 		
 		void Button2Click(object sender, EventArgs e)
 		{
-			openItemPch();
+			openFile( "item_pch.txt" );
 		}
 		
 		void Button3Click(object sender, EventArgs e)
 		{
-			openNpcPch();
+			openFile( "npc_pch.txt" );
 		}
 		
 		void Button4Click(object sender, EventArgs e)

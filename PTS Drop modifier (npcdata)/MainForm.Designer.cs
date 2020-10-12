@@ -1,6 +1,6 @@
 ﻿/*
  * Created by SharpDevelop.
- * User: User
+ * Author: Obius
  * Date: 08.10.2020
  * Time: 19:41
  * 
@@ -13,7 +13,6 @@ using System.Windows.Forms;
 using System.Collections;
 using System.ComponentModel;
 using System.Text;
-using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Globalization;
 
@@ -54,25 +53,25 @@ namespace PTS_Drop_modifier__npcdata_
 		private CheckBox checkBoxSpoil;
 		private CheckBox checkBoxDrop;
 		private StatusBar statusBar;
-		private System.Windows.Forms.GroupBox groupBox3;
+		private GroupBox groupBox3;
 
-		private System.Windows.Forms.GroupBox groupBox4;
-		private System.Windows.Forms.TextBox textBoxMinLevel;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.TextBox textBoxMaxLevel;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.GroupBox groupBox5;
-		private System.Windows.Forms.ComboBox comboBoxOperationMin;
-		private System.Windows.Forms.GroupBox groupBox7;
-		private System.Windows.Forms.TextBox textBoxOperandChance;
-		private System.Windows.Forms.ComboBox comboBoxOperationChance;
-		private System.Windows.Forms.GroupBox groupBox6;
-		private System.Windows.Forms.TextBox textBoxOperandMax;
-		private System.Windows.Forms.ComboBox comboBoxOperationMax;
-		private System.Windows.Forms.TextBox textBoxOperandMin;
-		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-		private System.Windows.Forms.Button button5;
+		private GroupBox groupBox4;
+		private TextBox textBoxMinLevel;
+		private Label label3;
+		private TextBox textBoxMaxLevel;
+		private Label label2;
+		private Label label1;
+		private GroupBox groupBox5;
+		private ComboBox comboBoxOperationMin;
+		private GroupBox groupBox7;
+		private TextBox textBoxOperandChance;
+		private ComboBox comboBoxOperationChance;
+		private GroupBox groupBox6;
+		private TextBox textBoxOperandMax;
+		private ComboBox comboBoxOperationMax;
+		private TextBox textBoxOperandMin;
+		private TableLayoutPanel tableLayoutPanel1;
+		private Button button5;
 		
 		//
 		protected override void Dispose(bool disposing)
@@ -88,41 +87,41 @@ namespace PTS_Drop_modifier__npcdata_
 		//
 		private void InitializeComponent() 
 		{
-			this.statusBarPanel = new System.Windows.Forms.StatusBarPanel();
-			this.tabControl1 = new System.Windows.Forms.TabControl();
-			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.groupBox7 = new System.Windows.Forms.GroupBox();
-			this.textBoxOperandChance = new System.Windows.Forms.TextBox();
-			this.comboBoxOperationChance = new System.Windows.Forms.ComboBox();
-			this.groupBox6 = new System.Windows.Forms.GroupBox();
-			this.textBoxOperandMax = new System.Windows.Forms.TextBox();
-			this.comboBoxOperationMax = new System.Windows.Forms.ComboBox();
-			this.groupBox5 = new System.Windows.Forms.GroupBox();
-			this.textBoxOperandMin = new System.Windows.Forms.TextBox();
-			this.comboBoxOperationMin = new System.Windows.Forms.ComboBox();
-			this.groupBox4 = new System.Windows.Forms.GroupBox();
-			this.label3 = new System.Windows.Forms.Label();
-			this.textBoxMaxLevel = new System.Windows.Forms.TextBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label1 = new System.Windows.Forms.Label();
-			this.textBoxMinLevel = new System.Windows.Forms.TextBox();
-			this.groupBox3 = new System.Windows.Forms.GroupBox();
-			this.checkBoxDrop = new System.Windows.Forms.CheckBox();
-			this.checkBoxSpoil = new System.Windows.Forms.CheckBox();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.listBoxNpcPch = new System.Windows.Forms.ListBox();
-			this.button3 = new System.Windows.Forms.Button();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.button2 = new System.Windows.Forms.Button();
-			this.listBoxItemPch = new System.Windows.Forms.ListBox();
-			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-			this.richTextBoxResult = new System.Windows.Forms.RichTextBox();
-			this.button5 = new System.Windows.Forms.Button();
-			this.statusBar = new System.Windows.Forms.StatusBar();
-			((System.ComponentModel.ISupportInitialize)(this.statusBarPanel)).BeginInit();
+			this.statusBarPanel = new StatusBarPanel();
+			this.tabControl1 = new TabControl();
+			this.tabPage1 = new TabPage();
+			this.groupBox7 = new GroupBox();
+			this.textBoxOperandChance = new TextBox();
+			this.comboBoxOperationChance = new ComboBox();
+			this.groupBox6 = new GroupBox();
+			this.textBoxOperandMax = new TextBox();
+			this.comboBoxOperationMax = new ComboBox();
+			this.groupBox5 = new GroupBox();
+			this.textBoxOperandMin = new TextBox();
+			this.comboBoxOperationMin = new ComboBox();
+			this.groupBox4 = new GroupBox();
+			this.label3 = new Label();
+			this.textBoxMaxLevel = new TextBox();
+			this.label2 = new Label();
+			this.label1 = new Label();
+			this.textBoxMinLevel = new TextBox();
+			this.groupBox3 = new GroupBox();
+			this.checkBoxDrop = new CheckBox();
+			this.checkBoxSpoil = new CheckBox();
+			this.button4 = new Button();
+			this.button1 = new Button();
+			this.groupBox2 = new GroupBox();
+			this.listBoxNpcPch = new ListBox();
+			this.button3 = new Button();
+			this.groupBox1 = new GroupBox();
+			this.button2 = new Button();
+			this.listBoxItemPch = new ListBox();
+			this.tabPage2 = new TabPage();
+			this.tableLayoutPanel1 = new TableLayoutPanel();
+			this.richTextBoxResult = new RichTextBox();
+			this.button5 = new Button();
+			this.statusBar = new StatusBar();
+			( ( ISupportInitialize ) ( this.statusBarPanel ) ).BeginInit();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox7.SuspendLayout();
@@ -138,7 +137,7 @@ namespace PTS_Drop_modifier__npcdata_
 			// 
 			// statusBarPanel
 			// 
-			this.statusBarPanel.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Spring;
+			this.statusBarPanel.AutoSize = StatusBarPanelAutoSize.Spring;
 			this.statusBarPanel.Name = "statusBarPanel";
 			this.statusBarPanel.Width = 767;
 			// 
@@ -146,7 +145,7 @@ namespace PTS_Drop_modifier__npcdata_
 			// 
 			this.tabControl1.Controls.Add(this.tabPage1);
 			this.tabControl1.Controls.Add(this.tabPage2);
-			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tabControl1.Dock = DockStyle.Fill;
 			this.tabControl1.Location = new System.Drawing.Point(0, 0);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
@@ -166,7 +165,7 @@ namespace PTS_Drop_modifier__npcdata_
 			this.tabPage1.Controls.Add(this.groupBox1);
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
 			this.tabPage1.Name = "tabPage1";
-			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage1.Padding = new Padding(3);
 			this.tabPage1.Size = new System.Drawing.Size(776, 513);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "prepare";
@@ -194,7 +193,7 @@ namespace PTS_Drop_modifier__npcdata_
 			// 
 			// comboBoxOperationChance
 			// 
-			this.comboBoxOperationChance.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxOperationChance.DropDownStyle = ComboBoxStyle.DropDownList;
 			this.comboBoxOperationChance.FormattingEnabled = true;
 			this.comboBoxOperationChance.Items.AddRange(new object[] {
 			"none",
@@ -229,7 +228,7 @@ namespace PTS_Drop_modifier__npcdata_
 			// 
 			// comboBoxOperationMax
 			// 
-			this.comboBoxOperationMax.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxOperationMax.DropDownStyle = ComboBoxStyle.DropDownList;
 			this.comboBoxOperationMax.FormattingEnabled = true;
 			this.comboBoxOperationMax.Items.AddRange(new object[] {
 			"none",
@@ -264,7 +263,7 @@ namespace PTS_Drop_modifier__npcdata_
 			// 
 			// comboBoxOperationMin
 			// 
-			this.comboBoxOperationMin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxOperationMin.DropDownStyle = ComboBoxStyle.DropDownList;
 			this.comboBoxOperationMin.FormattingEnabled = true;
 			this.comboBoxOperationMin.Items.AddRange(new object[] {
 			"none",
@@ -401,7 +400,7 @@ namespace PTS_Drop_modifier__npcdata_
 			this.listBoxNpcPch.FormattingEnabled = true;
 			this.listBoxNpcPch.Location = new System.Drawing.Point(6, 47);
 			this.listBoxNpcPch.Name = "listBoxNpcPch";
-			this.listBoxNpcPch.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+			this.listBoxNpcPch.SelectionMode = SelectionMode.MultiSimple;
 			this.listBoxNpcPch.Size = new System.Drawing.Size(238, 316);
 			this.listBoxNpcPch.TabIndex = 4;
 			// 
@@ -441,7 +440,7 @@ namespace PTS_Drop_modifier__npcdata_
 			this.listBoxItemPch.FormattingEnabled = true;
 			this.listBoxItemPch.Location = new System.Drawing.Point(7, 48);
 			this.listBoxItemPch.Name = "listBoxItemPch";
-			this.listBoxItemPch.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+			this.listBoxItemPch.SelectionMode = SelectionMode.MultiSimple;
 			this.listBoxItemPch.Size = new System.Drawing.Size(237, 316);
 			this.listBoxItemPch.TabIndex = 2;
 			// 
@@ -450,7 +449,7 @@ namespace PTS_Drop_modifier__npcdata_
 			this.tabPage2.Controls.Add(this.tableLayoutPanel1);
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
 			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage2.Padding = new Padding(3);
 			this.tabPage2.Size = new System.Drawing.Size(776, 513);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "result";
@@ -459,21 +458,21 @@ namespace PTS_Drop_modifier__npcdata_
 			// tableLayoutPanel1
 			// 
 			this.tableLayoutPanel1.ColumnCount = 1;
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
 			this.tableLayoutPanel1.Controls.Add(this.richTextBoxResult, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.button5, 0, 1);
 			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 2;
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+			this.tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+			this.tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(770, 507);
 			this.tableLayoutPanel1.TabIndex = 1;
 			// 
 			// richTextBoxResult
 			// 
-			this.richTextBoxResult.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.richTextBoxResult.Dock = DockStyle.Fill;
 			this.richTextBoxResult.Location = new System.Drawing.Point(3, 3);
 			this.richTextBoxResult.Name = "richTextBoxResult";
 			this.richTextBoxResult.ReadOnly = true;
@@ -484,7 +483,7 @@ namespace PTS_Drop_modifier__npcdata_
 			// 
 			// button5
 			// 
-			this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.button5.Dock = DockStyle.Fill;
 			this.button5.Location = new System.Drawing.Point(3, 465);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(764, 39);
@@ -497,7 +496,7 @@ namespace PTS_Drop_modifier__npcdata_
 			// 
 			this.statusBar.Location = new System.Drawing.Point(0, 539);
 			this.statusBar.Name = "statusBar";
-			this.statusBar.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
+			this.statusBar.Panels.AddRange(new StatusBarPanel[] {
 			this.statusBarPanel});
 			this.statusBar.ShowPanels = true;
 			this.statusBar.Size = new System.Drawing.Size(784, 22);
@@ -512,7 +511,7 @@ namespace PTS_Drop_modifier__npcdata_
 			this.Controls.Add(this.statusBar);
 			this.Name = "MainForm";
 			this.Text = "Drop / Spoil Editor npcdata for mmo-dev.info";
-			((System.ComponentModel.ISupportInitialize)(this.statusBarPanel)).EndInit();
+			( ( ISupportInitialize ) ( this.statusBarPanel ) ).EndInit();
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			this.groupBox7.ResumeLayout(false);
@@ -531,46 +530,59 @@ namespace PTS_Drop_modifier__npcdata_
 			this.ResumeLayout(false);
 
 		}
-
-		//		
-		private void openNpcPch()
+		
+		//
+		private void openFile( string fileName )
 		{
 			using( var openFileDialog = new OpenFileDialog() )
 			{
 				openFileDialog.InitialDirectory = "c:\\";
-				openFileDialog.Filter = "npc_pch.txt|npc_pch.txt";
+				openFileDialog.Filter = fileName + "|" + fileName;
 				openFileDialog.FilterIndex = 2;
 				openFileDialog.RestoreDirectory = false;
 				
-				if (openFileDialog.ShowDialog() == DialogResult.OK)
-    			{
-				 	var filePath = openFileDialog.FileName;    
-			        
-				    var fileStream = openFileDialog.OpenFile();
+				if ( openFileDialog.ShowDialog() == DialogResult.OK )
+				{
+					var filePath = openFileDialog.FileName;
+					var fileStream = openFileDialog.OpenFile();
 					
-				    statusBarPanel.Text = "processing... npc_pch.txt";
+					statusBarPanel.Text = "processing... " + fileName;
+					
+					if ( fileName == "npc_pch.txt" )
+						listBoxNpcPch.Items.Clear();
+					else if ( fileName == "item_pch.txt" )
+						listBoxItemPch.Items.Clear();
+					
 					using ( var reader = new StreamReader( fileStream ) )
-			        {
-						while ( reader.Peek() >= 0 )
-                		{            
-							string line = reader.ReadLine().Trim();
-							if ( string.IsNullOrEmpty( line ) )
-								continue;
-							
-							string[] npcParam = line.Split( '=' );
-							if ( npcParam.Length < 2 )
-								continue;
-							
-							int npcId      = Int32.Parse( npcParam[1].Trim() ) - 1000000;
-							string npcName = npcParam[0].Trim()
-								.Replace( "[", string.Empty )
-								.Replace( "]", string.Empty );
-							
-							listBoxNpcPch.Items.Add( npcId + "\t" + npcName );
+					{
+						if ( fileName == "item_pch.txt" || fileName == "npc_pch.txt" )
+						{
+							while ( reader.Peek() >= 0 )
+							{
+								string line = reader.ReadLine().Trim();
+								if ( string.IsNullOrEmpty( line ) )
+									continue;
+								
+								string[] param = line.Split( '=' );
+								if ( param.Length < 2 )
+									continue;
+								
+								var id   = param[1].Trim();
+								var name = param[0].Trim()
+									.Replace( "[", string.Empty )
+									.Replace( "]", string.Empty );
+								
+								if ( fileName == "item_pch.txt" )
+									listBoxItemPch.Items.Add( id + "\t" + name );
+								else
+									listBoxNpcPch.Items.Add( ( Int32.Parse( id ) - 1000000 ) + "\t" + name );
+							}
 						}
-			        }
+						else
+							npcDataContent = reader.ReadToEnd();
+					}
 					statusBarPanel.Text = "";
-			    }
+				}
 			}
 		}
 		
@@ -604,74 +616,6 @@ namespace PTS_Drop_modifier__npcdata_
 	    		{
 	      			MessageBox.Show(errorMsg.Message);
 	    		}
-			}
-		}
-		
-		//
-		private void openNpcData()
-		{
-			using( var openFileDialog = new OpenFileDialog() )
-			{
-				openFileDialog.InitialDirectory = "c:\\";
-				openFileDialog.Filter = "npcdata.txt|npcdata.txt";
-				openFileDialog.FilterIndex = 2;
-				openFileDialog.RestoreDirectory = false;
-				
-				if ( openFileDialog.ShowDialog() == DialogResult.OK )
-    			{
-				 	var filePath = openFileDialog.FileName;    
-			        
-				    var fileStream = openFileDialog.OpenFile();
-					
-				    statusBarPanel.Text = "processing... npcdata.txt";
-					using ( var reader = new StreamReader(fileStream))
-			        {
-						npcDataContent = reader.ReadToEnd();
-			        }
-					statusBarPanel.Text = "";
-			    }
-			}
-		}
-		
-		//
-		private void openItemPch()
-		{
-			using( var openFileDialog = new OpenFileDialog() )
-			{
-				openFileDialog.InitialDirectory = "c:\\";
-				openFileDialog.Filter = "item_pch.txt|item_pch.txt";
-				openFileDialog.FilterIndex = 2;
-				openFileDialog.RestoreDirectory = false;
-				
-				if ( openFileDialog.ShowDialog() == DialogResult.OK )
-    			{
-				 	var filePath = openFileDialog.FileName;    
-			        
-				    var fileStream = openFileDialog.OpenFile();
-					
-				    statusBarPanel.Text = "processing... item_pch.txt";
-					using ( var reader = new StreamReader( fileStream ) )
-			        {
-						while ( reader.Peek() >= 0 )
-                		{            
-							string line = reader.ReadLine().Trim();
-							if ( string.IsNullOrEmpty( line ) )
-								continue;
-							
-							string[] itemParam = line.Split( '=' );
-							if ( itemParam.Length < 2 )
-								continue;
-							
-							var itemId   = itemParam[1].Trim();
-							var itemName = itemParam[0].Trim()
-								.Replace( "[", string.Empty )
-								.Replace( "]", string.Empty );
-							
-							listBoxItemPch.Items.Add( itemId + "\t" + itemName );
-						}
-			        }
-					statusBarPanel.Text = "";
-			    }
 			}
 		}
 
