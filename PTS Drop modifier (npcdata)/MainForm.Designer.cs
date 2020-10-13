@@ -622,7 +622,7 @@ namespace PTS_Drop_modifier__npcdata_
 		//
 		private void start()
 		{
-			if ( npcDataContent == "" || npcDataContent.Length == 0 )
+			if ( string.IsNullOrEmpty( npcDataContent ) )
 			{
 				MessageBox.Show( "npcdata.txt not selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
 				return;
