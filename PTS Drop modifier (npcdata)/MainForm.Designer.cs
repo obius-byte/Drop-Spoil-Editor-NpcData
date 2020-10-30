@@ -72,7 +72,15 @@ namespace PTS_Drop_modifier__npcdata_
 		private TextBox textBoxOperandMin;
 		private TableLayoutPanel tableLayoutPanel1;
 		private Button button5;
-		
+		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem русскийToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
+
 		//
 		protected override void Dispose(bool disposing)
 		{
@@ -87,41 +95,49 @@ namespace PTS_Drop_modifier__npcdata_
 		//
 		private void InitializeComponent() 
 		{
-			this.statusBarPanel = new StatusBarPanel();
-			this.tabControl1 = new TabControl();
-			this.tabPage1 = new TabPage();
-			this.groupBox7 = new GroupBox();
-			this.textBoxOperandChance = new TextBox();
-			this.comboBoxOperationChance = new ComboBox();
-			this.groupBox6 = new GroupBox();
-			this.textBoxOperandMax = new TextBox();
-			this.comboBoxOperationMax = new ComboBox();
-			this.groupBox5 = new GroupBox();
-			this.textBoxOperandMin = new TextBox();
-			this.comboBoxOperationMin = new ComboBox();
-			this.groupBox4 = new GroupBox();
-			this.label3 = new Label();
-			this.textBoxMaxLevel = new TextBox();
-			this.label2 = new Label();
-			this.label1 = new Label();
-			this.textBoxMinLevel = new TextBox();
-			this.groupBox3 = new GroupBox();
-			this.checkBoxDrop = new CheckBox();
-			this.checkBoxSpoil = new CheckBox();
-			this.button4 = new Button();
-			this.button1 = new Button();
-			this.groupBox2 = new GroupBox();
-			this.listBoxNpcPch = new ListBox();
-			this.button3 = new Button();
-			this.groupBox1 = new GroupBox();
-			this.button2 = new Button();
-			this.listBoxItemPch = new ListBox();
-			this.tabPage2 = new TabPage();
-			this.tableLayoutPanel1 = new TableLayoutPanel();
-			this.richTextBoxResult = new RichTextBox();
-			this.button5 = new Button();
-			this.statusBar = new StatusBar();
-			( ( ISupportInitialize ) ( this.statusBarPanel ) ).BeginInit();
+			this.statusBarPanel = new System.Windows.Forms.StatusBarPanel();
+			this.tabControl1 = new System.Windows.Forms.TabControl();
+			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.groupBox7 = new System.Windows.Forms.GroupBox();
+			this.textBoxOperandChance = new System.Windows.Forms.TextBox();
+			this.comboBoxOperationChance = new System.Windows.Forms.ComboBox();
+			this.groupBox6 = new System.Windows.Forms.GroupBox();
+			this.textBoxOperandMax = new System.Windows.Forms.TextBox();
+			this.comboBoxOperationMax = new System.Windows.Forms.ComboBox();
+			this.groupBox5 = new System.Windows.Forms.GroupBox();
+			this.textBoxOperandMin = new System.Windows.Forms.TextBox();
+			this.comboBoxOperationMin = new System.Windows.Forms.ComboBox();
+			this.groupBox4 = new System.Windows.Forms.GroupBox();
+			this.label3 = new System.Windows.Forms.Label();
+			this.textBoxMaxLevel = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			this.textBoxMinLevel = new System.Windows.Forms.TextBox();
+			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.checkBoxDrop = new System.Windows.Forms.CheckBox();
+			this.checkBoxSpoil = new System.Windows.Forms.CheckBox();
+			this.button4 = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.listBoxNpcPch = new System.Windows.Forms.ListBox();
+			this.button3 = new System.Windows.Forms.Button();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.button2 = new System.Windows.Forms.Button();
+			this.listBoxItemPch = new System.Windows.Forms.ListBox();
+			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.richTextBoxResult = new System.Windows.Forms.RichTextBox();
+			this.button5 = new System.Windows.Forms.Button();
+			this.statusBar = new System.Windows.Forms.StatusBar();
+			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.русскийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			((System.ComponentModel.ISupportInitialize)(this.statusBarPanel)).BeginInit();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox7.SuspendLayout();
@@ -133,11 +149,12 @@ namespace PTS_Drop_modifier__npcdata_
 			this.groupBox1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
 			this.tableLayoutPanel1.SuspendLayout();
+			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// statusBarPanel
 			// 
-			this.statusBarPanel.AutoSize = StatusBarPanelAutoSize.Spring;
+			this.statusBarPanel.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Spring;
 			this.statusBarPanel.Name = "statusBarPanel";
 			this.statusBarPanel.Width = 767;
 			// 
@@ -145,11 +162,11 @@ namespace PTS_Drop_modifier__npcdata_
 			// 
 			this.tabControl1.Controls.Add(this.tabPage1);
 			this.tabControl1.Controls.Add(this.tabPage2);
-			this.tabControl1.Dock = DockStyle.Fill;
-			this.tabControl1.Location = new System.Drawing.Point(0, 0);
+			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tabControl1.Location = new System.Drawing.Point(0, 24);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(784, 539);
+			this.tabControl1.Size = new System.Drawing.Size(784, 515);
 			this.tabControl1.TabIndex = 0;
 			// 
 			// tabPage1
@@ -165,8 +182,8 @@ namespace PTS_Drop_modifier__npcdata_
 			this.tabPage1.Controls.Add(this.groupBox1);
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
 			this.tabPage1.Name = "tabPage1";
-			this.tabPage1.Padding = new Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(776, 513);
+			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage1.Size = new System.Drawing.Size(776, 489);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "prepare";
 			this.tabPage1.UseVisualStyleBackColor = true;
@@ -180,7 +197,7 @@ namespace PTS_Drop_modifier__npcdata_
 			this.groupBox7.Size = new System.Drawing.Size(186, 75);
 			this.groupBox7.TabIndex = 15;
 			this.groupBox7.TabStop = false;
-			this.groupBox7.Text = "chance";
+			this.groupBox7.Text = "change chance";
 			// 
 			// textBoxOperandChance
 			// 
@@ -189,11 +206,10 @@ namespace PTS_Drop_modifier__npcdata_
 			this.textBoxOperandChance.Size = new System.Drawing.Size(174, 20);
 			this.textBoxOperandChance.TabIndex = 1;
 			this.textBoxOperandChance.Text = "0";
-			this.textBoxOperandChance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxKeyPressCheckDigit);
 			// 
 			// comboBoxOperationChance
 			// 
-			this.comboBoxOperationChance.DropDownStyle = ComboBoxStyle.DropDownList;
+			this.comboBoxOperationChance.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxOperationChance.FormattingEnabled = true;
 			this.comboBoxOperationChance.Items.AddRange(new object[] {
 			"none",
@@ -215,7 +231,7 @@ namespace PTS_Drop_modifier__npcdata_
 			this.groupBox6.Size = new System.Drawing.Size(186, 73);
 			this.groupBox6.TabIndex = 14;
 			this.groupBox6.TabStop = false;
-			this.groupBox6.Text = "max";
+			this.groupBox6.Text = "change max. amount";
 			// 
 			// textBoxOperandMax
 			// 
@@ -224,11 +240,10 @@ namespace PTS_Drop_modifier__npcdata_
 			this.textBoxOperandMax.Size = new System.Drawing.Size(174, 20);
 			this.textBoxOperandMax.TabIndex = 1;
 			this.textBoxOperandMax.Text = "0";
-			this.textBoxOperandMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxKeyPressCheckDigit);
 			// 
 			// comboBoxOperationMax
 			// 
-			this.comboBoxOperationMax.DropDownStyle = ComboBoxStyle.DropDownList;
+			this.comboBoxOperationMax.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxOperationMax.FormattingEnabled = true;
 			this.comboBoxOperationMax.Items.AddRange(new object[] {
 			"none",
@@ -250,7 +265,7 @@ namespace PTS_Drop_modifier__npcdata_
 			this.groupBox5.Size = new System.Drawing.Size(186, 72);
 			this.groupBox5.TabIndex = 13;
 			this.groupBox5.TabStop = false;
-			this.groupBox5.Text = "min";
+			this.groupBox5.Text = "change min. amount";
 			// 
 			// textBoxOperandMin
 			// 
@@ -259,11 +274,10 @@ namespace PTS_Drop_modifier__npcdata_
 			this.textBoxOperandMin.Size = new System.Drawing.Size(174, 20);
 			this.textBoxOperandMin.TabIndex = 1;
 			this.textBoxOperandMin.Text = "0";
-			this.textBoxOperandMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxKeyPressCheckDigit);
 			// 
 			// comboBoxOperationMin
 			// 
-			this.comboBoxOperationMin.DropDownStyle = ComboBoxStyle.DropDownList;
+			this.comboBoxOperationMin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxOperationMin.FormattingEnabled = true;
 			this.comboBoxOperationMin.Items.AddRange(new object[] {
 			"none",
@@ -292,9 +306,9 @@ namespace PTS_Drop_modifier__npcdata_
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(88, 16);
+			this.label3.Location = new System.Drawing.Point(85, 16);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(35, 13);
+			this.label3.Size = new System.Drawing.Size(51, 13);
 			this.label3.TabIndex = 4;
 			this.label3.Text = "max";
 			// 
@@ -318,9 +332,9 @@ namespace PTS_Drop_modifier__npcdata_
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(40, 16);
+			this.label1.Location = new System.Drawing.Point(38, 16);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(25, 14);
+			this.label1.Size = new System.Drawing.Size(42, 14);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "min";
 			// 
@@ -349,7 +363,7 @@ namespace PTS_Drop_modifier__npcdata_
 			// 
 			this.checkBoxDrop.Location = new System.Drawing.Point(22, 19);
 			this.checkBoxDrop.Name = "checkBoxDrop";
-			this.checkBoxDrop.Size = new System.Drawing.Size(60, 24);
+			this.checkBoxDrop.Size = new System.Drawing.Size(73, 24);
 			this.checkBoxDrop.TabIndex = 8;
 			this.checkBoxDrop.Text = "drop";
 			this.checkBoxDrop.UseVisualStyleBackColor = true;
@@ -358,7 +372,7 @@ namespace PTS_Drop_modifier__npcdata_
 			// 
 			this.checkBoxSpoil.Location = new System.Drawing.Point(101, 19);
 			this.checkBoxSpoil.Name = "checkBoxSpoil";
-			this.checkBoxSpoil.Size = new System.Drawing.Size(60, 24);
+			this.checkBoxSpoil.Size = new System.Drawing.Size(79, 24);
 			this.checkBoxSpoil.TabIndex = 9;
 			this.checkBoxSpoil.Text = "spoil";
 			this.checkBoxSpoil.UseVisualStyleBackColor = true;
@@ -366,7 +380,7 @@ namespace PTS_Drop_modifier__npcdata_
 			// button4
 			// 
 			this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.button4.Location = new System.Drawing.Point(3, 476);
+			this.button4.Location = new System.Drawing.Point(3, 452);
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(770, 34);
 			this.button4.TabIndex = 7;
@@ -400,7 +414,7 @@ namespace PTS_Drop_modifier__npcdata_
 			this.listBoxNpcPch.FormattingEnabled = true;
 			this.listBoxNpcPch.Location = new System.Drawing.Point(6, 47);
 			this.listBoxNpcPch.Name = "listBoxNpcPch";
-			this.listBoxNpcPch.SelectionMode = SelectionMode.MultiSimple;
+			this.listBoxNpcPch.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
 			this.listBoxNpcPch.Size = new System.Drawing.Size(238, 316);
 			this.listBoxNpcPch.TabIndex = 4;
 			// 
@@ -440,7 +454,7 @@ namespace PTS_Drop_modifier__npcdata_
 			this.listBoxItemPch.FormattingEnabled = true;
 			this.listBoxItemPch.Location = new System.Drawing.Point(7, 48);
 			this.listBoxItemPch.Name = "listBoxItemPch";
-			this.listBoxItemPch.SelectionMode = SelectionMode.MultiSimple;
+			this.listBoxItemPch.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
 			this.listBoxItemPch.Size = new System.Drawing.Size(237, 316);
 			this.listBoxItemPch.TabIndex = 2;
 			// 
@@ -449,8 +463,8 @@ namespace PTS_Drop_modifier__npcdata_
 			this.tabPage2.Controls.Add(this.tableLayoutPanel1);
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
 			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Padding = new Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(776, 513);
+			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage2.Size = new System.Drawing.Size(776, 489);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "result";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -458,33 +472,33 @@ namespace PTS_Drop_modifier__npcdata_
 			// tableLayoutPanel1
 			// 
 			this.tableLayoutPanel1.ColumnCount = 1;
-			this.tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
 			this.tableLayoutPanel1.Controls.Add(this.richTextBoxResult, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.button5, 0, 1);
 			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 2;
-			this.tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-			this.tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(770, 507);
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(770, 483);
 			this.tableLayoutPanel1.TabIndex = 1;
 			// 
 			// richTextBoxResult
 			// 
-			this.richTextBoxResult.Dock = DockStyle.Fill;
+			this.richTextBoxResult.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.richTextBoxResult.Location = new System.Drawing.Point(3, 3);
 			this.richTextBoxResult.Name = "richTextBoxResult";
 			this.richTextBoxResult.ReadOnly = true;
-			this.richTextBoxResult.Size = new System.Drawing.Size(764, 456);
+			this.richTextBoxResult.Size = new System.Drawing.Size(764, 432);
 			this.richTextBoxResult.TabIndex = 0;
 			this.richTextBoxResult.Text = "";
 			this.richTextBoxResult.WordWrap = false;
 			// 
 			// button5
 			// 
-			this.button5.Dock = DockStyle.Fill;
-			this.button5.Location = new System.Drawing.Point(3, 465);
+			this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.button5.Location = new System.Drawing.Point(3, 441);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(764, 39);
 			this.button5.TabIndex = 1;
@@ -496,11 +510,76 @@ namespace PTS_Drop_modifier__npcdata_
 			// 
 			this.statusBar.Location = new System.Drawing.Point(0, 539);
 			this.statusBar.Name = "statusBar";
-			this.statusBar.Panels.AddRange(new StatusBarPanel[] {
+			this.statusBar.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
 			this.statusBarPanel});
 			this.statusBar.ShowPanels = true;
 			this.statusBar.Size = new System.Drawing.Size(784, 22);
 			this.statusBar.TabIndex = 1;
+			// 
+			// menuStrip1
+			// 
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.fileToolStripMenuItem,
+			this.languageToolStripMenuItem,
+			this.toolStripMenuItem1});
+			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(784, 24);
+			this.menuStrip1.TabIndex = 2;
+			this.menuStrip1.Text = "menuStrip1";
+			// 
+			// fileToolStripMenuItem
+			// 
+			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.exitToolStripMenuItem});
+			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+			this.fileToolStripMenuItem.Text = "File";
+			// 
+			// exitToolStripMenuItem
+			// 
+			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+			this.exitToolStripMenuItem.Text = "Exit";
+			this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
+			// 
+			// languageToolStripMenuItem
+			// 
+			this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.русскийToolStripMenuItem,
+			this.englishToolStripMenuItem});
+			this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+			this.languageToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+			this.languageToolStripMenuItem.Text = "Language";
+			// 
+			// русскийToolStripMenuItem
+			// 
+			this.русскийToolStripMenuItem.Name = "русскийToolStripMenuItem";
+			this.русскийToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+			this.русскийToolStripMenuItem.Text = "Русский";
+			this.русскийToolStripMenuItem.Click += new System.EventHandler(this.РусскийToolStripMenuItemClick);
+			// 
+			// englishToolStripMenuItem
+			// 
+			this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+			this.englishToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+			this.englishToolStripMenuItem.Text = "English";
+			this.englishToolStripMenuItem.Click += new System.EventHandler(this.EnglishToolStripMenuItemClick);
+			// 
+			// toolStripMenuItem1
+			// 
+			this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.aboutToolStripMenuItem});
+			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
+			this.toolStripMenuItem1.Text = "?";
+			// 
+			// aboutToolStripMenuItem
+			// 
+			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+			this.aboutToolStripMenuItem.Text = "About...";
+			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItemClick);
 			// 
 			// MainForm
 			// 
@@ -509,9 +588,12 @@ namespace PTS_Drop_modifier__npcdata_
 			this.ClientSize = new System.Drawing.Size(784, 561);
 			this.Controls.Add(this.tabControl1);
 			this.Controls.Add(this.statusBar);
+			this.Controls.Add(this.menuStrip1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "MainForm";
 			this.Text = "Drop / Spoil Editor npcdata for mmo-dev.info";
-			( ( ISupportInitialize ) ( this.statusBarPanel ) ).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.statusBarPanel)).EndInit();
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			this.groupBox7.ResumeLayout(false);
@@ -527,8 +609,38 @@ namespace PTS_Drop_modifier__npcdata_
 			this.groupBox1.ResumeLayout(false);
 			this.tabPage2.ResumeLayout(false);
 			this.tableLayoutPanel1.ResumeLayout(false);
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
+		}
+		private void prepareUI()
+		{
+			fileToolStripMenuItem.Text = rs.GetString( "file" );
+			exitToolStripMenuItem.Text = rs.GetString( "exit" );
+			button1.Text = rs.GetString( "choose" ) + " npcdata.txt";
+			button5.Text = rs.GetString( "saveAs" );
+			button2.Text = rs.GetString( "choose" );
+			button3.Text = rs.GetString( "choose" );
+			button4.Text = rs.GetString( "start" );
+			languageToolStripMenuItem.Text = rs.GetString( "language" );
+			
+			tabPage1.Text = rs.GetString( "prepare" );
+			tabPage2.Text = rs.GetString( "result" );
+			
+			groupBox3.Text = rs.GetString( "searchIn" );
+			checkBoxDrop.Text = rs.GetString( "drop" );
+			checkBoxSpoil.Text = rs.GetString( "spoil" );
+			
+			groupBox4.Text = rs.GetString( "levelRange" );
+			
+			label1.Text = rs.GetString( "min" );
+			label3.Text = rs.GetString( "max" );
+			
+			groupBox5.Text = rs.GetString( "changeMinAmount" );
+			groupBox6.Text = rs.GetString( "changeMaxAmount" );
+			groupBox7.Text = rs.GetString( "changeChance" );
 		}
 		
 		//
@@ -689,6 +801,36 @@ namespace PTS_Drop_modifier__npcdata_
 				return;
 			}
 			
+			double operandMin = 0;
+			if ( !string.IsNullOrWhiteSpace( textBoxOperandMin.Text ) && textBoxOperandMin.Text != "0" )
+			{
+				if ( !double.TryParse( textBoxOperandMin.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out operandMin ) )
+				{
+					MessageBox.Show( "incorrect operand value specified for 'min'!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+					return;
+				}
+			}
+			
+			double operandMax = 0;
+			if ( !string.IsNullOrWhiteSpace( textBoxOperandMax.Text ) && textBoxOperandMax.Text != "0" )
+			{
+				if ( !double.TryParse( textBoxOperandMax.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out operandMax ) )
+				{
+					MessageBox.Show( "incorrect operand value specified for 'max'!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+					return;
+				}
+			}
+			
+			double operandChance = 0;
+			if ( !string.IsNullOrWhiteSpace( textBoxOperandChance.Text ) && textBoxOperandChance.Text != "0" )
+			{
+				if ( !double.TryParse( textBoxOperandChance.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out operandChance ) )
+				{
+					MessageBox.Show( "incorrect operand value specified for 'chance'!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+					return;
+				}
+			}
+			
 			if ( listBoxItemPch.SelectedItems.Count == 0 && listBoxNpcPch.SelectedItems.Count == 0 )
 			{
 				DialogResult dialogResult = MessageBox.Show( "NPC(s) / Item(s) not selected! The drop / spoil change will be applied to all NPCs for all items!!!", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning );
@@ -696,7 +838,6 @@ namespace PTS_Drop_modifier__npcdata_
 				if ( dialogResult == DialogResult.Cancel )
 					return;
 			}
-			
 			statusBarPanel.Text = "processing...";
 			selectedItemPch.Clear();
 			if ( listBoxItemPch.SelectedItems.Count > 0 )
@@ -717,18 +858,6 @@ namespace PTS_Drop_modifier__npcdata_
 					selectedNpcPch.Add( "[" + name + "]" );
 				}
 			}
-			
-			int operandMin = 0;
-			if ( !string.IsNullOrWhiteSpace( textBoxOperandMin.Text ) && textBoxOperandMin.Text != "0" )
-				operandMin = Int32.Parse( textBoxOperandMin.Text );
-			
-			int operandMax = 0;
-			if ( !string.IsNullOrWhiteSpace( textBoxOperandMax.Text ) && textBoxOperandMax.Text != "0" )
-				operandMax = Int32.Parse( textBoxOperandMax.Text );
-			
-			int operandChance = 0;
-			if ( !string.IsNullOrWhiteSpace( textBoxOperandChance.Text ) && textBoxOperandChance.Text != "0" )
-				operandChance = Int32.Parse( textBoxOperandChance.Text );
 			
 			Operation operationMin = Operation.none;
 			if ( !string.IsNullOrEmpty( comboBoxOperationMin.Text ) && comboBoxOperationMin.Text != "none" )
@@ -898,31 +1027,33 @@ namespace PTS_Drop_modifier__npcdata_
 			division
 		}
 		
-		private int mathOperation( Operation op, int value, int operand )
+		private int mathOperation( Operation op, int value, double operand )
 		{
+			double result = -1;
+			
 			if ( op == Operation.addition )
 			{
-				value = value + operand;
+				result = value + operand;
 			} 
 			else if ( op == Operation.subtraction ) 
 			{
-				value = value - operand;
+				result = value - operand;
 			}
 			else if ( op == Operation.multiplication ) 
 			{
-				value = value * operand;
+				result = value * operand;
 			}
 			else if ( op == Operation.division ) 
 			{
-				value = value / operand;
+				result = value / operand;
 			}
 			
 			// TODO: check for zero?
 
-			return value;
+			return ( int ) Math.Round( result );
 		}
 		
-		private double mathOperation( Operation op, double value, int operand )
+		private double mathOperation( Operation op, double value, double operand )
 		{
 			if ( op == Operation.addition )
 			{

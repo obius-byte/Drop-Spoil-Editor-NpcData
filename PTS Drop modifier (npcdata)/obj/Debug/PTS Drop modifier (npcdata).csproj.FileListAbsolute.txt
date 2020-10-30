@@ -14,3 +14,5 @@ E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\bin\Debug\
 E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\bin\Debug\npcdata.exe
 E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\bin\Debug\npcdata.pdb
 E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Debug\npcdata.pdb
+E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Debug\PTS_Drop_modifier__npcdata_.Properties.en.resources
+E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Debug\PTS_Drop_modifier__npcdata_.Properties.ru.resources

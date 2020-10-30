@@ -7,6 +7,8 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Resources;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace PTS_Drop_modifier__npcdata_
@@ -16,6 +18,9 @@ namespace PTS_Drop_modifier__npcdata_
 	/// </summary>
 	public partial class MainForm : Form
 	{
+		protected ResourceManager rs;
+		protected string selectedLang = "en";
+		
 		public MainForm()
 		{
 			//
@@ -23,9 +28,17 @@ namespace PTS_Drop_modifier__npcdata_
 			//
 			InitializeComponent();
 			
+			loadResource();
+			prepareUI();
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
+			CenterToScreen();
+		}
+		
+		void loadResource()
+		{
+			rs = new ResourceManager("PTS_Drop_modifier__npcdata_.Properties." + selectedLang, Assembly.GetExecutingAssembly());
 		}
 		
 		void Button1Click(object sender, EventArgs e)
@@ -61,6 +74,28 @@ namespace PTS_Drop_modifier__npcdata_
 		void Button5Click(object sender, EventArgs e)
 		{
 			saveAs();
+		}
+		void РусскийToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			selectedLang = "ru";
+			loadResource();
+			prepareUI();
+		}
+		void EnglishToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			selectedLang = "en";
+			loadResource();
+			prepareUI();
+		}
+		void AboutToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			Form1 about = new Form1();
+			
+			about.Show();
+		}
+		void ExitToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			Application.Exit();
 		}
 	}
 }
