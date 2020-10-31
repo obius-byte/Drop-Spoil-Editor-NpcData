@@ -6,3 +6,5 @@ E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Releas
 E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Release\npcdata.exe
 E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Release\PTS_Drop_modifier__npcdata_.Properties.en.resources
 E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Release\PTS_Drop_modifier__npcdata_.Properties.ru.resources
+E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Release\PTS_Drop_modifier__npcdata_.Form1.resources
+E:\MyProjects\PTS Drop modifier (npcdata)\PTS Drop modifier (npcdata)\obj\Release\PTS_Drop_modifier__npcdata_.Properties.resource.resources

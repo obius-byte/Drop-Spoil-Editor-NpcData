@@ -136,10 +136,10 @@
     <value>поиск в списке:</value>
   </data>
   <data name="drop" xml:space="preserve">
-    <value>дропа</value>
+    <value>дроп</value>
   </data>
   <data name="spoil" xml:space="preserve">
-    <value>спойла</value>
+    <value>спойл</value>
   </data>
   <data name="changeChance" xml:space="preserve">
     <value>изменить шанс</value>
@@ -167,5 +167,44 @@
   </data>
   <data name="start" xml:space="preserve">
     <value>Начать</value>
+  </data>
+  <data name="notSelected" xml:space="preserve">
+    <value>не выбран!</value>
+  </data>
+  <data name="needSelectTypeList" xml:space="preserve">
+    <value>Необходимо выбрать тип списка (дроп и/или спойл)!</value>
+  </data>
+  <data name="needSelectTypeOperation" xml:space="preserve">
+    <value>Необходимо выбрать тип операции для (мин. и/или макс. кол-во и/или шанса)!</value>
+  </data>
+  <data name="specifyValue" xml:space="preserve">
+    <value>Укажите значение для</value>
+  </data>
+  <data name="chance" xml:space="preserve">
+    <value>шанс</value>
+  </data>
+  <data name="minAmount" xml:space="preserve">
+    <value>мин. кол-во</value>
+  </data>
+  <data name="maxAmount" xml:space="preserve">
+    <value>макс. кол-во</value>
+  </data>
+  <data name="incorrectValue" xml:space="preserve">
+    <value>Неверное значение для</value>
+  </data>
+  <data name="npcAndItemsNotSelected" xml:space="preserve">
+    <value>НПС(ы) / предмет(ы) не выбраны! Значения дропа/спойла будут изменены во всех предметах у всех НПС!!!</value>
+  </data>
+  <data name="addition" xml:space="preserve">
+    <value>сложение</value>
+  </data>
+  <data name="subtraction" xml:space="preserve">
+    <value>вычитание</value>
+  </data>
+  <data name="multiplication" xml:space="preserve">
+    <value>умножение</value>
+  </data>
+  <data name="division" xml:space="preserve">
+    <value>деление</value>
   </data>
 </root>

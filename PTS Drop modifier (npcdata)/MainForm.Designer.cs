@@ -617,30 +617,47 @@ namespace PTS_Drop_modifier__npcdata_
 		}
 		private void prepareUI()
 		{
-			fileToolStripMenuItem.Text = rs.GetString( "file" );
-			exitToolStripMenuItem.Text = rs.GetString( "exit" );
-			button1.Text = rs.GetString( "choose" ) + " npcdata.txt";
-			button5.Text = rs.GetString( "saveAs" );
-			button2.Text = rs.GetString( "choose" );
-			button3.Text = rs.GetString( "choose" );
-			button4.Text = rs.GetString( "start" );
-			languageToolStripMenuItem.Text = rs.GetString( "language" );
+			fileToolStripMenuItem.Text = rsLang.GetString( "file" );
+			exitToolStripMenuItem.Text = rsLang.GetString( "exit" );
+			button1.Text = rsLang.GetString( "choose" ) + " npcdata.txt";
+			button5.Text = rsLang.GetString( "saveAs" );
+			button2.Text = rsLang.GetString( "choose" );
+			button3.Text = rsLang.GetString( "choose" );
+			button4.Text = rsLang.GetString( "start" );
+			languageToolStripMenuItem.Text = rsLang.GetString( "language" );
 			
-			tabPage1.Text = rs.GetString( "prepare" );
-			tabPage2.Text = rs.GetString( "result" );
+			tabPage1.Text = rsLang.GetString( "prepare" );
+			tabPage2.Text = rsLang.GetString( "result" );
 			
-			groupBox3.Text = rs.GetString( "searchIn" );
-			checkBoxDrop.Text = rs.GetString( "drop" );
-			checkBoxSpoil.Text = rs.GetString( "spoil" );
+			groupBox3.Text = rsLang.GetString( "searchIn" );
+			checkBoxDrop.Text = rsLang.GetString( "drop" );
+			checkBoxSpoil.Text = rsLang.GetString( "spoil" );
 			
-			groupBox4.Text = rs.GetString( "levelRange" );
+			groupBox4.Text = rsLang.GetString( "levelRange" );
 			
-			label1.Text = rs.GetString( "min" );
-			label3.Text = rs.GetString( "max" );
+			label1.Text = rsLang.GetString( "min" );
+			label3.Text = rsLang.GetString( "max" );
 			
-			groupBox5.Text = rs.GetString( "changeMinAmount" );
-			groupBox6.Text = rs.GetString( "changeMaxAmount" );
-			groupBox7.Text = rs.GetString( "changeChance" );
+			groupBox5.Text = rsLang.GetString( "changeMinAmount" );
+			groupBox6.Text = rsLang.GetString( "changeMaxAmount" );
+			groupBox7.Text = rsLang.GetString( "changeChance" );
+			
+			object[] operations = new object[]
+			{
+				rsLang.GetString( "addition" ),
+				rsLang.GetString( "subtraction" ),
+				rsLang.GetString( "multiplication" ),
+				rsLang.GetString( "division" )
+			};
+			
+			comboBoxOperationMin.Items.Clear();
+			comboBoxOperationMin.Items.AddRange( operations );
+			
+			comboBoxOperationMax.Items.Clear();
+			comboBoxOperationMax.Items.AddRange( operations );
+			
+			comboBoxOperationChance.Items.Clear();
+			comboBoxOperationChance.Items.AddRange( operations );
 		}
 		
 		//
@@ -731,18 +748,23 @@ namespace PTS_Drop_modifier__npcdata_
 			}
 		}
 
+		private void messageWarning( string text )
+		{
+			MessageBox.Show( text, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning );
+		}
+		
 		//
 		private void start()
 		{
 			if ( string.IsNullOrEmpty( npcDataContent ) )
 			{
-				MessageBox.Show( "npcdata.txt not selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+				messageWarning( "npcdata.txt " + rsLang.GetString( "notSelected" ) );
 				return;
 			}
 			
 			if ( !checkBoxDrop.Checked && !checkBoxSpoil.Checked )
 			{
-				MessageBox.Show( "you need to select 'drop' or / and 'spoil'!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+				messageWarning( rsLang.GetString( "needSelectTypeList" ) );
 				return;
 			}
 			
@@ -750,54 +772,34 @@ namespace PTS_Drop_modifier__npcdata_
 			    && ( string.IsNullOrEmpty( comboBoxOperationMax.Text ) || comboBoxOperationMax.Text == "none" ) 
 			    && ( string.IsNullOrEmpty( comboBoxOperationChance.Text ) || comboBoxOperationChance.Text == "none" ) )
 			{
-				MessageBox.Show( "you need to select operation type for\n'min' or / and 'max' or / and 'chance'!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+				messageWarning( rsLang.GetString( "needSelectTypeOperation" ) );
 				return;
 			}
 			
-			if ( ( string.IsNullOrWhiteSpace( textBoxOperandMin.Text ) || textBoxOperandMin.Text == "0" ) 
-			    && ( string.IsNullOrWhiteSpace( textBoxOperandMax.Text ) || textBoxOperandMax.Text == "0" ) 
-			    && ( string.IsNullOrWhiteSpace( textBoxOperandChance.Text ) || textBoxOperandChance.Text == "0" ) )
-			{
-				if ( !string.IsNullOrEmpty( comboBoxOperationMin.Text ) && comboBoxOperationMin.Text != "none" )
-				{
-					MessageBox.Show( "you need to select operand for 'min'!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
-					return;
-				}
-				
-				if ( !string.IsNullOrEmpty( comboBoxOperationMax.Text ) && comboBoxOperationMax.Text != "none" )
-				{
-					MessageBox.Show( "you need to select operand for 'max'!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
-					return;
-				}
-				
-				if ( !string.IsNullOrEmpty( comboBoxOperationChance.Text ) && comboBoxOperationChance.Text != "none" )
-				{
-					MessageBox.Show( "you need to select operand for 'chance'!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
-					return;
-				}
-				
-				MessageBox.Show( "you need to select operand for 'min' or / and 'max' or / and 'chance'!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
-				return;
-			}
-			
-			if ( !string.IsNullOrEmpty( comboBoxOperationMin.Text ) && comboBoxOperationMin.Text != "none" 
+			if ( ( !string.IsNullOrEmpty( comboBoxOperationMin.Text ) && comboBoxOperationMin.Text != "none" ) 
 			    && ( string.IsNullOrWhiteSpace( textBoxOperandMin.Text ) || textBoxOperandMin.Text == "0" ) )
 			{
-				MessageBox.Show( "you need to select operand for 'min'!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
-				return;
-			}
-
-			if ( !string.IsNullOrEmpty( comboBoxOperationMax.Text ) && comboBoxOperationMax.Text != "none" 
-			    && ( string.IsNullOrWhiteSpace( textBoxOperandMax.Text ) || textBoxOperandMax.Text == "0" ) )
-			{
-				MessageBox.Show( "you need to select operand for 'max'!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+				textBoxOperandMin.Focus();
+				textBoxOperandMin.SelectAll();
+				messageWarning( rsLang.GetString( "specifyValue" ) + " " + rsLang.GetString( "minAmount" ) );
 				return;
 			}
 			
-			if ( !string.IsNullOrEmpty( comboBoxOperationChance.Text ) && comboBoxOperationChance.Text != "none" 
+			if ( ( !string.IsNullOrEmpty( comboBoxOperationMax.Text ) && comboBoxOperationMax.Text != "none" ) 
+			    && ( string.IsNullOrWhiteSpace( textBoxOperandMax.Text ) || textBoxOperandMax.Text == "0" ) )
+			{
+				textBoxOperandMax.Focus();
+				textBoxOperandMax.SelectAll();
+				messageWarning( rsLang.GetString( "specifyValue" ) + " " + rsLang.GetString( "maxAmount" ) );
+				return;
+			}
+			
+			if ( ( !string.IsNullOrEmpty( comboBoxOperationChance.Text ) && comboBoxOperationChance.Text != "none" ) 
 			    && ( string.IsNullOrWhiteSpace( textBoxOperandChance.Text ) || textBoxOperandChance.Text == "0" ) )
 			{
-				MessageBox.Show( "you need to select operand for 'chance'!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+				textBoxOperandChance.Focus();
+				textBoxOperandChance.SelectAll();
+				messageWarning( rsLang.GetString( "specifyValue" ) + " " + rsLang.GetString( "chance" ) );
 				return;
 			}
 			
@@ -806,7 +808,9 @@ namespace PTS_Drop_modifier__npcdata_
 			{
 				if ( !double.TryParse( textBoxOperandMin.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out operandMin ) )
 				{
-					MessageBox.Show( "incorrect operand value specified for 'min'!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+					textBoxOperandMin.Focus();
+					textBoxOperandMin.SelectAll();
+					messageWarning( rsLang.GetString( "incorrectValue" ) + " " + rsLang.GetString( "minAmount" ) );
 					return;
 				}
 			}
@@ -816,7 +820,9 @@ namespace PTS_Drop_modifier__npcdata_
 			{
 				if ( !double.TryParse( textBoxOperandMax.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out operandMax ) )
 				{
-					MessageBox.Show( "incorrect operand value specified for 'max'!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+					textBoxOperandMax.Focus();
+					textBoxOperandMax.SelectAll();
+					messageWarning( rsLang.GetString( "incorrectValue" ) + " " + rsLang.GetString( "maxAmount" ) );
 					return;
 				}
 			}
@@ -826,18 +832,23 @@ namespace PTS_Drop_modifier__npcdata_
 			{
 				if ( !double.TryParse( textBoxOperandChance.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out operandChance ) )
 				{
-					MessageBox.Show( "incorrect operand value specified for 'chance'!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+					textBoxOperandChance.Focus();
+					textBoxOperandChance.SelectAll();
+					messageWarning( rsLang.GetString( "incorrectValue" ) + " " + rsLang.GetString( "chance" ) );
 					return;
 				}
 			}
 			
 			if ( listBoxItemPch.SelectedItems.Count == 0 && listBoxNpcPch.SelectedItems.Count == 0 )
 			{
-				DialogResult dialogResult = MessageBox.Show( "NPC(s) / Item(s) not selected! The drop / spoil change will be applied to all NPCs for all items!!!", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning );
+				DialogResult dialogResult = MessageBox.Show( rsLang.GetString( "npcAndItemsNotSelected" ), "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning );
 				
 				if ( dialogResult == DialogResult.Cancel )
 					return;
 			}
+
+			this.Enabled = false;
+			
 			statusBarPanel.Text = "processing...";
 			selectedItemPch.Clear();
 			if ( listBoxItemPch.SelectedItems.Count > 0 )
@@ -1016,36 +1027,45 @@ namespace PTS_Drop_modifier__npcdata_
 			tabControl1.SelectedIndex = 1;
 			
 			statusBarPanel.Text = "";
+			
+			this.Enabled = true;
 		}
 
 		enum Operation
 		{
 			none,
 			addition,
+			сложение,
 			subtraction,
+			вычитание,
 			multiplication,
-			division
+			умножение,
+			division,
+			деление
 		}
 		
 		private int mathOperation( Operation op, int value, double operand )
 		{
 			double result = -1;
 			
-			if ( op == Operation.addition )
+			switch (op) 
 			{
-				result = value + operand;
-			} 
-			else if ( op == Operation.subtraction ) 
-			{
-				result = value - operand;
-			}
-			else if ( op == Operation.multiplication ) 
-			{
-				result = value * operand;
-			}
-			else if ( op == Operation.division ) 
-			{
-				result = value / operand;
+				case Operation.addition:
+				case Operation.сложение:
+					result = value + operand;
+					break;
+				case Operation.subtraction:
+				case Operation.вычитание:
+					result = value - operand;
+					break;
+				case Operation.multiplication:
+				case Operation.умножение:
+					result = value * operand;
+					break;
+				case Operation.division:
+				case Operation.деление:
+					result = value / operand;
+					break;
 			}
 			
 			// TODO: check for zero?
@@ -1055,21 +1075,24 @@ namespace PTS_Drop_modifier__npcdata_
 		
 		private double mathOperation( Operation op, double value, double operand )
 		{
-			if ( op == Operation.addition )
+			switch (op) 
 			{
-				value = value + operand;
-			} 
-			else if ( op == Operation.subtraction ) 
-			{
-				value = value - operand;
-			}
-			else if ( op == Operation.multiplication ) 
-			{
-				value = value * operand;
-			}
-			else if ( op == Operation.division ) 
-			{
-				value = value / operand;
+				case Operation.addition:
+				case Operation.сложение:
+					value = value + operand;
+					break;
+				case Operation.subtraction:
+				case Operation.вычитание:
+					value = value - operand;
+					break;
+				case Operation.multiplication:
+				case Operation.умножение:
+					value = value * operand;
+					break;
+				case Operation.division:
+				case Operation.деление:
+					value = value / operand;
+					break;
 			}
 
 			return value;
